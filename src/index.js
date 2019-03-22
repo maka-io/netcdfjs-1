@@ -4,7 +4,7 @@ const IOBuffer = require('iobuffer');
 
 const utils = require('./utils');
 const data = require('./data');
-const readHeader = require('./header');
+const header = require('./header');
 const toString = require('./toString');
 
 /**
@@ -26,8 +26,7 @@ class NetCDFReader {
     utils.notNetcdf(version > 2, 'unknown version');
 
     // Read the header
-    this.header = readHeader(buffer, version);
-    console.log(this.header);
+    this.header = header(buffer, version);
     if (this.header.variables === undefined)
       throw '[!] Header not parsed!';
     this.buffer = buffer;
