@@ -27,7 +27,11 @@ class NetCDFReader {
 
     // Read the header
     this.header = readHeader(buffer, version);
+    if (this.header === undefined)
+      throw '[!] Header not parsed!';
     this.buffer = buffer;
+    if (this.buffer === undefined)
+      throw '[!] buffer not defined!';
   }
 
   /**
