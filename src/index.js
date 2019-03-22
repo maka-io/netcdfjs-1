@@ -24,7 +24,7 @@ class NetCDFReader {
 
     // Check the NetCDF format
     const version = buffer.readByte();
-    utils.notNetcdf(version > 2, 'unknown version');
+    //utils.notNetcdf(version > 2, 'unknown version');
 
     // Read the header
     this.header = header(buffer, version);
