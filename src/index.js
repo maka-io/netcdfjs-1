@@ -20,11 +20,11 @@ class NetCDFReader {
 
     console.log(buffer);
     // Validate that it's a NetCDF file
-    //utils.notNetcdf(buffer.readChars(3) !== 'CDF', 'should start with CDF');
+    utils.notNetcdf(buffer.readChars(3) !== 'CDF', 'should start with CDF');
 
     // Check the NetCDF format
     const version = buffer.readByte();
-    //utils.notNetcdf(version > 2, 'unknown version');
+    utils.notNetcdf(version > 2, 'unknown version');
 
     // Read the header
     this.header = header(buffer, version);

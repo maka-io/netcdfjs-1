@@ -7,9 +7,9 @@
  * @param {string} reason - Reason to throw
  */
 function notNetcdf(statement, reason) {
-  if (statement) {
-    throw new TypeError(`Not a valid NetCDF v3.x file: ${reason}`);
-  }
+  //if (statement) {
+  //  throw new TypeError(`Not a valid NetCDF v3.x file: ${reason}`);
+  //}
 }
 
 /**
