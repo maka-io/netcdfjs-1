@@ -18,6 +18,7 @@ class NetCDFReader {
     const buffer = new IOBuffer(data);
     buffer.setBigEndian();
 
+    console.log(buffer);
     // Validate that it's a NetCDF file
     //utils.notNetcdf(buffer.readChars(3) !== 'CDF', 'should start with CDF');
 
