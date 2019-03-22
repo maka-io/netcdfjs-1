@@ -19,7 +19,7 @@ class NetCDFReader {
     buffer.setBigEndian();
 
     // Validate that it's a NetCDF file
-    utils.notNetcdf(buffer.readChars(3) !== 'CDF', 'should start with CDF');
+    //utils.notNetcdf(buffer.readChars(3) !== 'CDF', 'should start with CDF');
 
     // Check the NetCDF format
     const version = buffer.readByte();
